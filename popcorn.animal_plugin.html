@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Popcorn Subtitle Plug-in Demo</title>
+    <script src="../../popcorn.js"></script>
+    <script src="popcorn.animal_plugin.js"></script>
+    <script>
+      document.addEventListener( "DOMContentLoaded", function() {
+                                var p = Popcorn( "#video" )
+                                .volume( 0 )
+                                .play()
+                                .animal_plugin({
+                                          start: 2,
+                                          end: 4,
+                                          title: "Tiger",
+                                          description: "Tiger description",
+                                          picture: "http://upload.wikimedia.org/wikipedia/commons/4/41/Siberischer_tiger_de_edit02.jpg",
+                                          })
+                                .animal_plugin({
+                                          start: 5,
+                                          end: 45,
+                                          title: "Sheep",
+                                          description: "Sheep description",
+                                          picture: "http://kassowal.com/wallpaper/Animal-wallpaper/Sheep/4.jpg",
+                                          })
+                                }, false);
+      </script>
+  </head>
+  <body>
+    <div>
+      
+      <video id="video"
+        controls height="480" width="854"
+        poster="../../test/poster.png">
+        
+        <source id="mp4"
+          src="../../test/trailer.mp4"
+          type='video/mp4; codecs="avc1, mp4a"'>
+          
+          <source id="ogv"
+            src="../../test/trailer.ogv"
+            type='video/ogg; codecs="theora, vorbis"'>
+            
+            <p>Your user agent does not support the HTML5 Video element.</p>
+            
+            </video>
+    </div>
+    
+  </body>
+</html>
